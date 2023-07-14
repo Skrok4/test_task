@@ -2,18 +2,20 @@
 
 This project involves the completion of two tasks: implementing a hashmap class and writing a small service class. Below is an overview of the tasks and their completion status.
 
-Task 1:
 ✅ - **Completed**
 ❌- **Missing**
+##
+Task 1:
 Implementation of the HashMap class with put, get, remove, keys, contains_key, values, and items methods: ✅ 
 Tests for the HashMap class in test_hashmap.py: ✅ 
 Notes with argumentation for the chosen implementation: ✅ 
-Task 2:
+##
 
+Task 2:
 Implementation of the UserService class with get and add methods: ✅ 
 Tests for the UserService class in test_userservice.py: ✅ 
 Notes with argumentation for the chosen implementation: ✅ 
-
+##
 
 #### Notes with argumentation for the chosen implementation:
 ### Task 1: Implement own hashmap class
