@@ -48,6 +48,7 @@ class TestUserService(unittest.TestCase):
         await self.add_user(user, user_service)
         return await self.get_user(user.id, user_service)
 
+    @classmethod
     async def asyncTearDownClass(cls):
         if cls.async_session is not None:
             await cls.async_session.close()

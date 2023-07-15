@@ -31,18 +31,8 @@ class UserService:
                 return None
 
     async def add(self, user: UserDTO):
-        async with self.session() as session:
-            async with session.begin_nested():
-                db_user = User(id=user.id, name=user.name, age=user.age)
-                session.add(db_user)
-                logging.info(f"Add user: {user.name}")
-                await session.commit()
-                logging.info(f"Add user: {user.name}")
-
-  # async def add(self, user: UserDTO):
-  #       async with self.session.begin_nested():
-  #           db_user = User(id=user.id, name=user.name, age=user.age)
-  #           self.session.add(db_user)
-  #           logger.info(f"Add user: {user.name}")
-  #           await self.session.commit()
-  #           logger.info(f"User added: {user.name}")
+        async with self.session.begin() as session:
+            db_user = User(id=user.id, name=user.name, age=user.age)
+            session.add(db_user)
+            logging.info(f"Add user: {user.name}")
+            await session.commit()
